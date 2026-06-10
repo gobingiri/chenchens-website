@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chen Chen's Nashville Hot Chicken | Choose Your Country</title>
+<meta name="description" content="Chen Chen's Nashville Hot Chicken — Southern heat, Asian twist. Select Canada or the United States to find your location.">
+<link rel="alternate" hreflang="en-ca" href="https://www.chenchenshotchicken.com/ca/">
+<link rel="alternate" hreflang="en-us" href="https://www.chenchenshotchicken.com/us/">
+<link rel="alternate" hreflang="x-default" href="https://www.chenchenshotchicken.com/">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="landing">
+
+<img class="logo" src="https://static.wixstatic.com/media/7fb84b_dcab6211f3694564a0339015a8cad274~mv2.png/v1/fill/w_322,h_322,al_c,q_85/circle.png" alt="Chen Chen's Nashville Hot Chicken logo">
+
+<h1>Southern Heat. Asian Twist.</h1>
+<p class="sub">Choose your country</p>
+
+<div class="country-cards">
+  <a class="country-card" href="ca/" onclick="remember('ca')">
+    <div class="flag">🇨🇦</div>
+    <h2>Canada</h2>
+    <span>Toronto — The Well</span>
+  </a>
+  <a class="country-card" href="us/" onclick="remember('us')">
+    <div class="flag">🇺🇸</div>
+    <h2>United States</h2>
+    <span>Coming to the USA</span>
+  </a>
+</div>
+
+<label class="remember">
+  <input type="checkbox" id="rememberMe" checked>Remember my choice
+</label>
+
+<script>
+function remember(c) {
+  if (document.getElementById('rememberMe').checked) {
+    try { localStorage.setItem('cc_country', c); } catch (e) {}
+  } else {
+    try { localStorage.removeItem('cc_country'); } catch (e) {}
+  }
+}
+// Auto-redirect returning visitors who saved a choice
+(function () {
+  try {
+    var c = localStorage.getItem('cc_country');
+    if ((c === 'ca' || c === 'us') && !location.search.includes('stay')) {
+      location.replace(c + '/');
+    }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
