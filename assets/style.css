@@ -625,6 +625,18 @@ body.has-banner .site-header { top: var(--banner-h, 36px); }
     background: var(--white);
   }
 
+  .site-header .container {
+    position: relative;
+    justify-content: flex-end;
+  }
+
+  .site-header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
   .nav-toggle { display: block; }
 
   .site-nav {

@@ -72,19 +72,19 @@
     },
     2: {
       name: 'Mild',
-      desc: 'A warm, approachable kiss of heat — our house cayenne blend rubbed gently over the crispy crust. Enough tingle to know you\'re eating Nashville hot chicken, but your taste buds stay intact.',
+      desc: 'An approachable warmth featuring our signature cayenne blend. Enough spice to highlight the classic Nashville heat while keeping the Szechuan flavor profile front and center.',
       color: '#FF8C42',
       rgb: '255, 140, 66'
     },
     3: {
       name: 'Medium',
-      desc: 'The sweet spot. Traditional Nashville cayenne heat meets a signature hit of Szechuan peppercorn — a tingling, numbing warmth that builds with every bite. Most popular for a reason.',
+      desc: 'Our signature balance. Traditional Nashville cayenne heat paired with a custom blend of Szechuan peppercorns, creating a layered, tingling warmth that builds gradually.',
       color: '#D42B2B',
       rgb: '212, 43, 43'
     },
     4: {
       name: 'Poultrygeist',
-      desc: 'You\'ve been warned. Ghost pepper, Carolina Reaper dust, and weaponized Szechuan peppercorn oil. Your eyes will water. Your forehead will sweat. No refunds on tears. 🪦',
+      desc: 'Our maximum heat level. Infused with Ghost pepper, Carolina Reaper, and pure Szechuan chili extract. Crafted for extreme heat enthusiasts while maintaining our signature flavor balance.',
       color: '#4A0E0E',
       rgb: '74, 14, 14'
     }
@@ -280,7 +280,7 @@
         nlForm.style.display = 'none';
         if (nlSuccess) {
           nlSuccess.style.display = 'block';
-          nlSuccess.textContent = '🎉 You\'re on the list! We\'ll keep you posted.';
+          nlSuccess.textContent = 'You\'re on the list! We\'ll keep you posted.';
         }
       }
     } catch (e) {}
