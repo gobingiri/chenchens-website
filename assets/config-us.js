@@ -1,0 +1,67 @@
+/**
+ * Chen Chen's Nashville Hot Chicken — United States Configuration
+ * ================================================================
+ * All country-specific data lives here. When the US location launches,
+ * update the TODO fields below — it's a one-file edit to go live.
+ */
+const COUNTRY_CONFIG = {
+  country: 'us',
+  countryName: 'United States',
+  flag: '🇺🇸',
+  lang: 'en-US',
+  currency: 'USD',
+  currencySymbol: '$',
+
+  /* ── Brand copy ─────────────────────────────────────── */
+  tagline: 'Born in China. Raised in Nashville. Coming Home to the USA.',
+  heroHeadline: 'Nashville Heat.<br><span class="gradient-text">Szechuan Soul.</span>',
+  heroSubline: 'Coming Home.',
+  heroCopy: 'The chef-driven Nashville hot chicken that conquered Toronto is crossing the border — bold Szechuan-fused flavors, crispy and handcrafted from scratch. Ranked #1 on Yelp Canada\'s Top 100. Proudly Halal. America, get ready.',
+  metaTitle: "Chen Chen's Nashville Hot Chicken | Coming to the United States",
+  metaDescription: "Chen Chen's Nashville Hot Chicken is expanding to the USA. Bold Southern flavors with a chef-driven Asian twist. Halal, crispy, made from scratch. Join our VIP waitlist.",
+
+  /* ── Opening Soon banner ────────────────────────────── */
+  /* Set to false and fill in location data to launch */
+  openingSoon: true,
+  openingSoonText: '🇺🇸 Grand Opening Coming Soon — Join Our VIP Waitlist!',
+
+  /* ── Locations ───────────────────────────────────────── */
+  locations: [
+    {
+      name: '[TODO: US Location Name]',        // e.g. 'Midtown — Houston'
+      shortName: '[TODO: Short Name]',          // e.g. 'Midtown'
+      address: '[TODO: Full US Address]',       // e.g. '123 Main St, Houston, TX 77002'
+      phone: '[TODO: US Phone]',                // e.g. '(713) 555-0199'
+      phoneTel: '[TODO: +1XXXXXXXXXX]',
+      email: '[TODO: us@chenchenshotchicken.com]',
+      timezone: 'America/Chicago',              // TODO: Adjust for actual city
+      hours: [
+        { days: 'Mon–Thu', open: '11:00', close: '21:00', label: 'TBA' },
+        { days: 'Fri–Sat', open: '11:00', close: '22:00', label: 'TBA' },
+        { days: 'Sun',     open: '11:00', close: '21:00', label: 'TBA' }
+      ],
+      mapUrl: '[TODO: Google Maps URL]',
+      mapEmbed: '',
+      orderPickupUrl: '[TODO: Toast or Square pickup URL]',
+      orderPickupLabel: 'Order Pickup',
+      orderDeliveryUrl: '[TODO: Uber Eats / DoorDash URL]',
+      orderDeliveryLabel: 'Order Delivery',
+      schema: {
+        streetAddress: '[TODO]',
+        addressLocality: '[TODO]',
+        addressRegion: '[TODO]',
+        postalCode: '[TODO]',
+        addressCountry: 'US',
+        geo: { latitude: 0, longitude: 0 }      // TODO: Set coordinates
+      }
+    }
+  ],
+
+  /* ── Social links ───────────────────────────────────── */
+  social: {
+    instagram: 'https://www.instagram.com/chenchens.hotchicken/',
+    instagramHandle: '@chenchenshotchicken',
+    tiktok: 'https://www.tiktok.com/@chenchenshotchicken',
+    facebook: 'https://www.facebook.com/chenchenshotchicken'
+  }
+};
