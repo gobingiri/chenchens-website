@@ -60,6 +60,7 @@ const COUNTRY_CONFIG = {
   social: {
     instagram: 'https://www.instagram.com/chenchens.hotchicken/',
     instagramHandle: '@chenchenshotchicken',
+    instagramFeedUrl: '', // Paste Behold.so or NoCodeAPI JSON Feed URL here for a live feed
     tiktok: 'https://www.tiktok.com/@chenchenshotchicken',
     facebook: 'https://www.facebook.com/chenchenshotchicken'
   }

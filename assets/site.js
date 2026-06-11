@@ -376,4 +376,50 @@
     });
   });
 
+  /* ── Dynamic Instagram Feed ────────────────────────────────────────────── */
+  function loadInstagramFeed() {
+    if (typeof COUNTRY_CONFIG === 'undefined' || !COUNTRY_CONFIG.social || !COUNTRY_CONFIG.social.instagramFeedUrl) return;
+
+    const grid = $('.social__grid');
+    if (!grid) return;
+
+    fetch(COUNTRY_CONFIG.social.instagramFeedUrl)
+      .then(res => res.json())
+      .then(data => {
+        // Support multiple feed formats (Behold.so, NoCodeAPI, standard Graph API payload)
+        const posts = Array.isArray(data) ? data : (data.data || []);
+        if (!posts.length) return;
+
+        // Display the first 8 posts
+        const items = posts.slice(0, 8);
+        let html = '';
+
+        items.forEach(post => {
+          const imgUrl = post.mediaUrl || post.media_url || '';
+          const link = post.permalink || '';
+          const caption = post.caption || "Chen Chen's Nashville Hot Chicken Instagram post";
+
+          if (imgUrl) {
+            html += `
+              <div class="social__grid-item">
+                <a href="${link}" target="_blank" rel="noopener" aria-label="View post on Instagram">
+                  <img src="${imgUrl}" alt="${caption.replace(/"/g, '&quot;')}" width="400" height="400" loading="lazy">
+                </a>
+              </div>
+            `;
+          }
+        });
+
+        if (html) {
+          grid.innerHTML = html;
+        }
+      })
+      .catch(err => {
+        // Fallback silently to our high-quality optimized local images if fetch fails or is rate-limited
+        console.warn('Instagram feed load failed. Falling back to local grid.', err);
+      });
+  }
+
+  loadInstagramFeed();
+
 })();
