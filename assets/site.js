@@ -291,6 +291,14 @@
   const bannerClose = $('#bannerClose');
   const headerEl = $('#siteHeader');
 
+  // Hide banner if openingSoon config is false
+  if (typeof COUNTRY_CONFIG !== 'undefined' && !COUNTRY_CONFIG.openingSoon) {
+    if (openingBanner) {
+      openingBanner.style.display = 'none';
+    }
+    document.body.classList.remove('has-banner');
+  }
+
   let adjustTicking = false;
   function adjustHeaderPosition() {
     if (!headerEl) return;

@@ -451,7 +451,7 @@ section {
   letter-spacing: .04em;
   position: relative;
   width: 100%;
-  z-index: 200;
+  z-index: 90;
 }
 
 .opening-banner a {
@@ -493,7 +493,7 @@ body.has-banner .site-header { top: var(--banner-h, 36px); }
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
-  transition: all var(--t-fast);
+  transition: background var(--t-fast), box-shadow var(--t-fast), height var(--t-fast);
   height: var(--header-h);
 }
 
@@ -629,11 +629,11 @@ body.has-banner .site-header { top: var(--banner-h, 36px); }
 
   .site-nav {
     position: fixed;
-    top: 0;
+    top: calc(-1 * var(--banner-h, 0px));
     right: -100%;
     width: min(320px, 85vw);
-    height: 100vh;
-    height: 100dvh;
+    height: calc(100vh + var(--banner-h, 0px));
+    height: calc(100dvh + var(--banner-h, 0px));
     background: var(--white);
     border-left: 1px solid var(--border);
     flex-direction: column;
