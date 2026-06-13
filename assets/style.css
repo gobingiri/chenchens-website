@@ -310,7 +310,7 @@ body.has-banner .site-header { top: 38px; }
 .hero__content { position: relative; margin-left: 0; padding-left: 2rem; }
 
 @media (max-width: 960px) {
-  .hero__content { margin-left: 0; padding-left: 1rem; margin-top: -15%; padding: 0 1rem; }
+  .hero__content { margin-left: 0; padding-left: 1rem; margin-top: 1rem; padding: 0 1rem; }
 }
 
 .hero__title {
@@ -325,9 +325,11 @@ body.has-banner .site-header { top: 38px; }
   .hero__title { margin-left: 0; }
 }
 
-.text-adaptive {
-  color: var(--bg-paper);
-  mix-blend-mode: difference;
+.text-cream { color: var(--bg-paper); }
+.text-charcoal { color: var(--charcoal); }
+
+@media (max-width: 960px) {
+  .text-cream { color: var(--charcoal); }
 }
 
 .hero__desc {
