@@ -326,10 +326,10 @@ body.has-banner .site-header { top: 38px; }
 }
 
 .text-cream { color: var(--bg-paper); }
-.text-charcoal { color: var(--charcoal); }
+.text-charcoal { color: var(--charcoal-light); }
 
 @media (max-width: 960px) {
-  .text-cream { color: var(--charcoal); }
+  .text-cream { color: var(--charcoal-light); }
 }
 
 .hero__desc {
