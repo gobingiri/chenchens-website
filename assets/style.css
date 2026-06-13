@@ -322,7 +322,7 @@ body.has-banner .site-header { top: 38px; }
 }
 
 @media (max-width: 960px) {
-  .hero__title { margin-left: 0; }
+  .hero__title { margin-left: 0; font-size: clamp(2.5rem, 11vw, 4rem); }
 }
 
 .text-cream { color: var(--bg-paper); }
