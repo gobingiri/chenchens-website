@@ -19,12 +19,13 @@
   <meta property="og:type" content="restaurant">
   <meta property="og:url" content="https://www.chenchenshotchicken.com/us/">
   <meta property="og:image" content="https://www.chenchenshotchicken.com/assets/sando.jpg">
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../assets/style.css?v=1.5">
+  <link rel="stylesheet" href="../assets/style.css?v=2.0">
 
   <!-- Schema.org Restaurant Structured Data -->
   <script type="application/ld+json">
@@ -53,24 +54,18 @@
 </head>
 <body class="has-banner">
 
-  <!-- Skip to Content -->
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       OPENING SOON BANNER (toggle via config-us.js openingSoon flag)
-       ═══════════════════════════════════════════════════════════════════════ -->
+  <!-- OPENING SOON BANNER -->
   <div class="opening-banner" id="openingBanner">
-    Grand Opening Coming Soon — <a href="#newsletter">Join Our VIP Waitlist</a>
+    GRAND OPENING COMING SOON — <a href="#newsletter">JOIN OUR VIP WAITLIST</a>
     <button class="banner-close" id="bannerClose" aria-label="Dismiss banner">✕</button>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       HEADER
-       ═══════════════════════════════════════════════════════════════════════ -->
+  <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="container">
       <a class="site-header__logo" href="#top" aria-label="Chen Chen's — back to top">
-        <img src="../assets/logo_circle.png" alt="Chen Chen's Nashville Hot Chicken logo" width="200" height="200">
+        <img src="../assets/logo_circle.png" alt="Chen Chen's Logo" width="80" height="80">
+        <span class="site-header__logo-text">MENU</span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -78,14 +73,12 @@
       </button>
 
       <nav class="site-nav" id="siteNav" aria-label="Main navigation">
-        <a class="site-nav__link" href="#menu">Menu</a>
-        <a class="site-nav__link" href="#heat">Spice Meter</a>
-        <a class="site-nav__link" href="#chef">Our Chef</a>
-        <a class="site-nav__link" href="#location">Location</a>
-        <a class="site-nav__link" href="#catering">Catering</a>
-        <a class="site-nav__link" href="#newsletter">Waitlist</a>
+        <a class="site-nav__link" href="#chef">CHEF</a>
+        <a class="site-nav__link" href="#location">LOCATIONS</a>
+        <a class="site-nav__link" href="#catering">CATERING</a>
+        <a class="site-nav__link" href="#newsletter">WAITLIST</a>
         <a class="site-nav__country" href="../?stay" onclick="try{localStorage.removeItem('cc_country')}catch(e){}">
-          US · Switch Country
+          US
         </a>
       </nav>
     </div>
@@ -93,452 +86,179 @@
 
   <main id="main">
 
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       HERO
-       ═══════════════════════════════════════════════════════════════════════ -->
+  <!-- HERO -->
   <section class="hero" id="top">
-    <div class="container grid-2 hero-grid">
-      <div class="reveal">
-        <p class="hero__kicker">Born in China. Raised in Nashville. Coming Home to the USA.</p>
-        <h1 class="hero__title">Nashville Heat.<br><span class="gradient-text">Szechuan Soul.</span><br>Coming Home.</h1>
-        <p class="hero__copy">The chef-driven Nashville hot chicken that conquered Toronto is crossing the border — bold Szechuan-fused flavors, crispy and handcrafted from scratch. Ranked #1 on Yelp Canada's Top 100. Proudly Halal. America, get ready.</p>
-        <div class="hero__cta" id="order">
-          <a class="btn btn--primary" href="#newsletter" id="heroWaitlist">Join the VIP Waitlist</a>
-          <a class="btn btn--secondary" href="#heat" id="heroExplore">Explore Spice Levels</a>
-        </div>
-        <div class="hero__badges">
-          <span class="badge badge--yelp">Yelp #1 in Canada</span>
-          <span class="badge badge--halal">Halal</span>
-        </div>
+    <div class="container grid-2">
+      <div class="hero__image-box">
+        <img src="../assets/sando.jpg" alt="Chen Chen's signature Nashville hot chicken sandwich" width="800" height="600" loading="eager">
       </div>
-      <div class="hero__image reveal reveal-delay-2">
-        <img src="../assets/sando.jpg" alt="Chen Chen's signature Nashville hot chicken sandwich — crispy double-fried chicken with slaw and pickles on brioche" width="800" height="600" loading="eager">
+      <div class="hero__content">
+        <h1 class="hero__title">
+          <span class="text-red">NASHVILLE HEAT.</span>
+          <span class="text-red">SZECHUAN SOUL.</span>
+          <span>COMING HOME.</span>
+        </h1>
+        <p class="hero__desc">The chef-driven Nashville hot chicken that conquered Toronto is crossing the border. Bold Szechuan-fused flavors, crispy and handcrafted from scratch.</p>
+        <div class="hero__cta" id="order">
+          <a class="btn btn--primary" href="#newsletter" id="heroWaitlist">JOIN VIP WAITLIST</a>
+          <a class="btn btn--primary" href="#heat" id="heroExplore">EXPLORE SPICE</a>
+        </div>
+        
+        <div class="hero__burn-scale">
+          <div class="fire-icon"></div>
+          <div class="box red"></div>
+          <div class="box red"></div>
+          <div class="box"></div>
+          <span>BURN SCALE</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       TICKER BANNER
-       ═══════════════════════════════════════════════════════════════════════ -->
+  <!-- TICKER -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker__track">
-      <span class="ticker__item">Born in China</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Raised in Nashville</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Coming Home to the USA</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Southern Heat</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Asian Twist</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Yelp's #1 Place to Eat</span><span class="ticker__separator"></span>
-      <span class="ticker__item">100% Halal</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Made from Scratch</span><span class="ticker__separator"></span>
-      <!-- Duplicate for seamless loop -->
-      <span class="ticker__item">Born in China</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Raised in Nashville</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Coming Home to the USA</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Southern Heat</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Asian Twist</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Yelp's #1 Place to Eat</span><span class="ticker__separator"></span>
-      <span class="ticker__item">100% Halal</span><span class="ticker__separator"></span>
-      <span class="ticker__item">Made from Scratch</span><span class="ticker__separator"></span>
+      <span class="ticker__item">Born in China</span><span class="ticker__separator">+</span>
+      <span class="ticker__item">Raised in Nashville</span><span class="ticker__separator">+</span>
+      <span class="ticker__item">Coming Home to the USA</span><span class="ticker__separator">+</span>
+      <span class="ticker__item">Southern Heat</span><span class="ticker__separator">+</span>
+      <span class="ticker__item">Asian Twist</span><span class="ticker__separator">+</span>
+      <!-- Duplicate -->
+      <span class="ticker__item">Born in China</span><span class="ticker__separator">+</span>
+      <span class="ticker__item">Raised in Nashville</span><span class="ticker__separator">+</span>
+      <span class="ticker__item">Coming Home to the USA</span><span class="ticker__separator">+</span>
+      <span class="ticker__item">Southern Heat</span><span class="ticker__separator">+</span>
+      <span class="ticker__item">Asian Twist</span><span class="ticker__separator">+</span>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       MENU HIGHLIGHTS (Preview)
-       ═══════════════════════════════════════════════════════════════════════ -->
-  <section class="menu" id="menu">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2>The Menu — Preview</h2>
-        <p>A taste of what's coming to the USA. Made from scratch, fried to order. 100% Halal chicken.</p>
-      </div>
-
-      <div class="menu__grid">
-        <!-- Nashville Hot Chicken Sandwich -->
-        <div class="menu__card reveal">
-          <div class="menu__card-img">
-            <div class="menu__card-badges"><span class="badge badge--halal">Halal</span></div>
-            <img src="../assets/sando.jpg" alt="Nashville Hot Chicken Sandwich" width="600" height="412" loading="lazy">
-          </div>
-          <div class="menu__card-body">
-            <h3>Nashville Hot Sando</h3>
-            <p>Crispy double-fried chicken thigh tossed in our house chili blend, topped with cider slaw, pickles, and comeback sauce on toasted brioche.</p>
-            <div class="menu__card-footer">
-              <span class="menu__card-price">Coming Soon</span>
-              <a class="menu__card-order" href="#newsletter">Notify Me</a>
-            </div>
-          </div>
+  <div class="container torn-section-container" id="menu">
+    <!-- BURN SCALE -->
+    <div class="burn-scale-panel" id="heat">
+      <h2>THE BURN SCALE</h2>
+      <div class="burn-scale__grid">
+        <div class="burn-card">
+          <div class="burn-card__num">01</div>
+          <div class="burn-card__title">SOUTHERN</div>
+          <div class="burn-card__desc">Custom abstract graphics decorated with a bold southern feel. Classic herbs.</div>
         </div>
-
-        <!-- Szechuan Chicken Sandwich -->
-        <div class="menu__card reveal reveal-delay-1">
-          <div class="menu__card-img">
-            <div class="menu__card-badges"><span class="badge badge--halal">Halal</span></div>
-            <img src="../assets/szechuan_sando.jpg" alt="Szechuan Chicken Sandwich" width="600" height="412" loading="lazy">
-          </div>
-          <div class="menu__card-body">
-            <h3>Szechuan Sando</h3>
-            <p>Our signature fusion — crispy chicken glazed in sweet-savory Szechuan chili sauce with Asian slaw, pickled vegetables, and cilantro on toasted brioche.</p>
-            <div class="menu__card-footer">
-              <span class="menu__card-price">Coming Soon</span>
-              <a class="menu__card-order" href="#newsletter">Notify Me</a>
-            </div>
-          </div>
+        <div class="burn-card">
+          <div class="burn-card__num">02</div>
+          <div class="burn-card__title">MILD</div>
+          <div class="burn-card__desc">A touch of heat with Szechuan spices. Perfect for beginners.</div>
         </div>
-
-        <!-- Tenders -->
-        <div class="menu__card reveal reveal-delay-2">
-          <div class="menu__card-img">
-            <div class="menu__card-badges"><span class="badge badge--halal">Halal</span></div>
-            <img src="../assets/hero_chicken.jpg" alt="Nashville Hot Chicken Tenders" width="600" height="412" loading="lazy">
-          </div>
-          <div class="menu__card-body">
-            <h3>Nashville Tenders</h3>
-            <p>Three colossal chicken tenders fried to perfection, dipped in spiced oil, served over white bread with pickles and house-made buttermilk ranch.</p>
-            <div class="menu__card-footer">
-              <span class="menu__card-price">Coming Soon</span>
-              <a class="menu__card-order" href="#newsletter">Notify Me</a>
-            </div>
-          </div>
+        <div class="burn-card">
+          <div class="burn-card__num">03</div>
+          <div class="burn-card__title">MEDIUM</div>
+          <div class="burn-card__desc">Our signature heat level. Hot and fiery with maximum flavor.</div>
         </div>
-
-        <!-- Rice Bowl -->
-        <div class="menu__card reveal">
-          <div class="menu__card-img">
-            <div class="menu__card-badges"><span class="badge badge--halal">Halal</span></div>
-            <img src="../assets/rice_bowl.jpg" alt="Nashville Hot Chicken Rice Bowl" width="600" height="412" loading="lazy">
-          </div>
-          <div class="menu__card-body">
-            <h3>Hot Chicken Rice Bowl</h3>
-            <p>Sliced Nashville hot tenders over steamed rice with pickled vegetables, drizzled with chili oil, sesame seeds, and green onions.</p>
-            <div class="menu__card-footer">
-              <span class="menu__card-price">Coming Soon</span>
-              <a class="menu__card-order" href="#newsletter">Notify Me</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bang Bang Shrimp Hoagie -->
-        <div class="menu__card reveal reveal-delay-1">
-          <div class="menu__card-img">
-            <img src="../assets/shrimp_hoagie.jpg" alt="Bang Bang Shrimp Hoagie" width="600" height="412" loading="lazy">
-          </div>
-          <div class="menu__card-body">
-            <h3>Bang Bang Shrimp Hoagie</h3>
-            <p>Crispy fried shrimp tossed in creamy bang bang sauce with shredded lettuce, pickled jalapeños, and cilantro on a toasted hoagie roll.</p>
-            <div class="menu__card-footer">
-              <span class="menu__card-price">Coming Soon</span>
-              <a class="menu__card-order" href="#newsletter">Notify Me</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bites on Mac -->
-        <div class="menu__card reveal reveal-delay-2">
-          <div class="menu__card-img">
-            <div class="menu__card-badges"><span class="badge badge--halal">Halal</span></div>
-            <img src="../assets/mac_bites.jpg" alt="Hot Chicken Bites on Mac &amp; Cheese" width="600" height="412" loading="lazy">
-          </div>
-          <div class="menu__card-body">
-            <h3>Bites on Mac &amp; Cheese</h3>
-            <p>Crispy Nashville hot chicken bites served on a bed of rich, creamy stovetop mac and cheese, drizzled with hot sauce and green onions.</p>
-            <div class="menu__card-footer">
-              <span class="menu__card-price">Coming Soon</span>
-              <a class="menu__card-order" href="#newsletter">Notify Me</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sides -->
-      <div class="menu__sides reveal">
-        <h3>Sides &amp; Fixins</h3>
-        <ul class="menu__sides-list">
-          <li>French Fries</li>
-          <li>Spicy Waffle Fries</li>
-          <li>Dirty South Fries</li>
-          <li>Sweet Chili Cauliflower</li>
-          <li>Nashville Hot Elote</li>
-          <li>Potato Salad</li>
-          <li>Southern Slaw</li>
-          <li>Mac &amp; Cheese</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       HEAT THERMOMETER
-       ═══════════════════════════════════════════════════════════════════════ -->
-  <section class="heat" id="heat">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2>The Burn Scale</h2>
-        <p>Four heat levels, balanced to perfection. Choose your spice.</p>
-      </div>
-
-      <div class="heat__scale reveal">
-        <div class="heat__cards">
-          <button class="heat__card active" data-level="1" tabindex="0" aria-label="Southern — No Heat">
-            <span class="heat__card-icon">01</span>
-            <span class="heat__card-name">Southern</span>
-            <span class="heat__card-tag">No Heat</span>
-          </button>
-          <button class="heat__card" data-level="2" tabindex="0" aria-label="Mild Heat">
-            <span class="heat__card-icon">02</span>
-            <span class="heat__card-name">Mild</span>
-            <span class="heat__card-tag">Warm</span>
-          </button>
-          <button class="heat__card" data-level="3" tabindex="0" aria-label="Medium Heat">
-            <span class="heat__card-icon">03</span>
-            <span class="heat__card-name">Medium</span>
-            <span class="heat__card-tag">Hot</span>
-          </button>
-          <button class="heat__card poultrygeist" data-level="4" tabindex="0" aria-label="Poultrygeist — Maximum Heat">
-            <span class="heat__card-icon">04</span>
-            <span class="heat__card-name">Poultrygeist</span>
-            <span class="heat__card-tag">Max Heat</span>
-          </button>
-        </div>
-
-        <div class="heat__bar">
-          <div class="heat__bar-fill" id="heatTrackFill" style="width: 0%"></div>
-        </div>
-
-        <div class="heat__info">
-          <p class="heat__info-desc" id="heatDesc">Crispy, juicy, golden-fried chicken with zero spice — all crunch, no kick. Classic Southern herbs, buttermilk brine, and a beautiful golden crust. The foundation.</p>
+        <div class="burn-card">
+          <div class="burn-card__num">04</div>
+          <div class="burn-card__title">POULTRYGEIST</div>
+          <div class="burn-card__desc">Extreme heat warning. For the brave and foolish only.</div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       CHEF / STORY
-       ═══════════════════════════════════════════════════════════════════════ -->
+    <!-- MENU -->
+    <div class="menu-panel">
+      <h2>THE MENU</h2>
+      <div class="menu-polaroids">
+        <div class="polaroid polaroid--1">
+          <img src="../assets/sando.jpg" alt="Nashville Hot Chicken Sando" loading="lazy">
+          <div class="polaroid__title">HOT CHICKEN SANDO</div>
+          <div class="polaroid__price">COMING SOON</div>
+        </div>
+        <div class="polaroid polaroid--2">
+          <img src="../assets/shrimp_hoagie.jpg" alt="Bang Bang Shrimp Hoagie" loading="lazy">
+          <div class="polaroid__title">BANG BANG SHRIMP HOAGIE</div>
+          <div class="polaroid__price">COMING SOON</div>
+        </div>
+        <div class="polaroid polaroid--3">
+          <img src="../assets/rice_bowl.jpg" alt="Rice Bowl" loading="lazy">
+          <div class="polaroid__title">HOT CHICKEN RICE BOWL</div>
+          <div class="polaroid__price">COMING SOON</div>
+        </div>
+        <div class="polaroid polaroid--4">
+          <img src="../assets/szechuan_sando.jpg" alt="Szechuan Sando" loading="lazy">
+          <div class="polaroid__title">SZECHUAN SANDO</div>
+          <div class="polaroid__price">COMING SOON</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHEF -->
   <section class="chef" id="chef">
-    <div class="container grid-2">
-      <div class="chef__image reveal">
-        <img src="../assets/chef_portrait.jpg" alt="Chef Chen Chen in his kitchen" width="600" height="800" loading="lazy">
-      </div>
-      <div class="chef__content reveal reveal-delay-1">
-        <h2>Meet Chef Chen</h2>
-        <p>Born in Wuhu, China and raised in Nashville, Tennessee, <strong>Chef Chen Chen</strong> grew up immersed in two culinary worlds — his family's Chinese restaurant and the bold, warm hospitality of Southern comfort food.</p>
-        <p>After cooking for thousands of festival-goers at Bonnaroo and studying culinary arts at George Brown College in Toronto, Chen fused his roots into something new: Nashville hot chicken elevated with Szechuan heat. Now he's bringing it home to America.</p>
-        <p>His philosophy is simple: <strong>do simple things exceptionally well.</strong></p>
-
-        <div class="journey">
-          <div class="journey__step">
-            <div class="journey__year">Nashville</div>
-            <h4 class="journey__title">Southern Roots</h4>
-            <p class="journey__desc">Grew up in Nashville's legendary hot chicken culture, learning spice blending from local kitchens and his family's Chinese restaurant.</p>
-          </div>
-          <div class="journey__step">
-            <div class="journey__year">Bonnaroo</div>
-            <h4 class="journey__title">The Festival Grind</h4>
-            <p class="journey__desc">Managed a 24-hour kitchen booth cooking for thousands — mastering high-volume consistency under pressure.</p>
-          </div>
-          <div class="journey__step">
-            <div class="journey__year">Toronto</div>
-            <h4 class="journey__title">The Well — Yelp #1</h4>
-            <p class="journey__desc">Launched the flagship at Toronto's premier food market. Within months: Yelp's #1 Place to Eat in Canada.</p>
-          </div>
-          <div class="journey__step">
-            <div class="journey__year">2026</div>
-            <h4 class="journey__title">Coming to America</h4>
-            <p class="journey__desc">Expanding to the United States — bringing the same from-scratch, Halal Nashville hot chicken back to where it all began.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       LOCATION & HOURS
-       ═══════════════════════════════════════════════════════════════════════ -->
-  <section class="location" id="location">
     <div class="container">
-      <div class="section-header reveal">
-        <h2>US Location</h2>
-        <p>We're scouting the perfect spot. Join the waitlist to be the first to know when and where we're opening.</p>
+      <div class="chef__img-wrap">
+        <img src="../assets/chef_portrait.jpg" alt="Chef Chen Chen" loading="lazy">
+        <div class="chef__stamp">MIXED TYPILOSOPHY</div>
       </div>
-
-      <div class="location__card reveal">
-        <div>
-          <!-- TODO: Replace with actual US location data in config-us.js -->
-          <h3 class="location__name">US Grand Opening</h3>
-          <p class="location__address">Location to be announced — 2026</p>
-
-          <div class="location__status location__status--soon" id="storeStatus">
-            <span class="location__status-dot"></span> Opening Soon
-          </div>
-
-          <table class="location__hours" aria-label="Business hours">
-            <tr><td class="day">Mon–Thu</td><td class="time">TBA</td></tr>
-            <tr><td class="day">Fri–Sat</td><td class="time">TBA</td></tr>
-            <tr><td class="day">Sun</td><td class="time">TBA</td></tr>
-          </table>
-
-          <div class="location__contact-line">Email: <a href="mailto:chenchensthewell@gmail.com">chenchensthewell@gmail.com</a></div>
-        </div>
-
-        <div class="location__actions">
-          <a class="btn btn--primary" href="#newsletter" id="locationWaitlist">Join the VIP Waitlist</a>
-          <a class="btn btn--ghost" href="#chef">Learn About the Chef</a>
-        </div>
+      <div class="chef__content">
+        <h2>MEET CHEF CHEN</h2>
+        <p>Chef Chen has a professional background of Southern style hot chicken and bringing Szechuan bold flavors to the world. Crispy, juicy, and handcrafted from scratch.</p>
+        <p>He values modern food philosophy blending tradition and Nashville's bold southern crunch. Every piece is monitored for excellent flavor and a true testament to custom good philosophy.</p>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       CATERING
-       ═══════════════════════════════════════════════════════════════════════ -->
-  <section class="catering" id="catering">
-    <div class="container grid-2">
-      <div class="catering__info reveal">
-        <h2>Chef-Driven Catering</h2>
-        <p class="catering__subtitle">Bring our unique Szechuan-Nashville fusion to your next event</p>
-        <p class="catering__copy">Make your next event standout. Whether it's a corporate lunch, a private gathering, or a large-scale event, we bring our signature Nashville hot chicken and Szechuan-fused comfort foods directly to you.</p>
-        
-        <ul class="catering__features">
-          <li><strong>100% Halal</strong> — Prepared with hand-slaughtered Halal chicken and dedicated equipment.</li>
-          <li><strong>Customizable Heat</strong> — Choose spice levels individually for each guest.</li>
-          <li><strong>Flexible Formats</strong> — Full-service chef stations or convenient drop-off platters.</li>
-          <li><strong>Signature Sides</strong> — Complete your menu with our handcrafted sides, including Mac &amp; Cheese and Hot Elote.</li>
-        </ul>
+  <!-- LOCATION & NEWSLETTER -->
+  <section id="location">
+    <div class="container loc-cat-grid">
+      <div class="location-box">
+        <div class="location-box__map">
+          <div class="location-pin"></div>
+        </div>
+        <h2>USA EXPANSION</h2>
+        <p><strong>Locations Info</strong><br>We're looking for the perfect flagship location in the United States.<br>Stay tuned for our first US announcement!</p>
       </div>
 
-      <div class="catering__form-container reveal reveal-delay-1">
-        <form class="catering__form" id="cateringForm">
-          <div class="form-group">
-            <label for="catName">Name</label>
-            <input type="text" id="catName" required placeholder="Your full name">
-          </div>
-          
-          <div class="form-row">
-            <div class="form-group">
-              <label for="catEmail">Email</label>
-              <input type="email" id="catEmail" required placeholder="yourname@email.com">
-            </div>
-            <div class="form-group">
-              <label for="catPhone">Phone</label>
-              <input type="tel" id="catPhone" required placeholder="(123) 456-7890">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="catDate">Event Date</label>
-              <input type="date" id="catDate" required>
-            </div>
-            <div class="form-group">
-              <label for="catGuests">Estimated Guests</label>
-              <input type="number" id="catGuests" min="10" required placeholder="e.g. 50">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>Preferred Heat Levels</label>
-            <div class="form-checkboxes">
-              <label class="checkbox-label">
-                <input type="checkbox" name="heatLevel" value="Southern" checked> Southern (No Heat)
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="heatLevel" value="Mild"> Mild
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="heatLevel" value="Medium"> Medium
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="heatLevel" value="Poultrygeist"> Poultrygeist (Extreme)
-              </label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="catDetails">Tell us about your event</label>
-            <textarea id="catDetails" rows="4" placeholder="Event location, type of service, dietary requirements, or special details..."></textarea>
-          </div>
-
-          <button class="btn btn--primary" type="submit">Submit Inquiry</button>
+      <div class="catering-box" id="newsletter">
+        <h2>VIP WAITLIST</h2>
+        <h3>GET EARLY ACCESS</h3>
+        <form class="cat-form" id="newsletterForm">
+          <input type="email" id="newsEmail" placeholder="Enter your email" required>
+          <button type="submit" class="cat-submit">SUBSCRIBE</button>
         </form>
-        
-        <div class="catering__success" id="cateringSuccess">
-          <h3>Inquiry Received</h3>
-          <p>Thanks for hosting with us. Our catering team will review your inquiry and reach back out within 24 hours to customize your menu.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       SOCIAL / INSTAGRAM
-       ═══════════════════════════════════════════════════════════════════════ -->
-  <section class="social" id="social">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2>Follow Us</h2>
-        <p>Follow @chenchenshotchicken for menu announcements, kitchen insights, and updates from the team.</p>
-      </div>
-
-      <div class="social__grid reveal">
-        <div class="social__grid-item"><img src="../assets/sando.jpg" alt="Nashville hot chicken sandwich" width="400" height="400" loading="lazy"></div>
-        <div class="social__grid-item"><img src="../assets/hero_chicken.jpg" alt="Crispy hot chicken tenders" width="400" height="400" loading="lazy"></div>
-        <div class="social__grid-item"><img src="../assets/loaded_fries.jpg" alt="Loaded waffle fries" width="400" height="400" loading="lazy"></div>
-        <div class="social__grid-item"><img src="../assets/szechuan_sando.jpg" alt="Szechuan chicken sandwich" width="400" height="400" loading="lazy"></div>
-        <div class="social__grid-item"><img src="../assets/mac_bites.jpg" alt="Hot chicken bites on mac and cheese" width="400" height="400" loading="lazy"></div>
-        <div class="social__grid-item"><img src="../assets/spicy_wings.jpg" alt="Szechuan honey wings" width="400" height="400" loading="lazy"></div>
-        <div class="social__grid-item"><img src="../assets/rice_bowl.jpg" alt="Hot chicken rice bowl" width="400" height="400" loading="lazy"></div>
-        <div class="social__grid-item"><img src="../assets/shrimp_hoagie.jpg" alt="Bang bang shrimp hoagie" width="400" height="400" loading="lazy"></div>
-      </div>
-
-      <div class="social__cta reveal">
-        <a class="btn btn--accent" href="https://www.instagram.com/chenchens.hotchicken/" target="_blank" rel="noopener" id="instagramCTA">Follow @chenchenshotchicken</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       NEWSLETTER / VIP WAITLIST
-       ═══════════════════════════════════════════════════════════════════════ -->
-  <section class="newsletter" id="newsletter">
-    <div class="container">
-      <div class="newsletter__box reveal">
-        <h3>USA VIP Waitlist</h3>
-        <p>Register for our VIP waitlist to receive opening date announcements, exclusive menu previews, and private tasting event invitations.</p>
-        <form class="newsletter__form" id="newsletterForm">
-          <input type="email" placeholder="Your email address" required aria-label="Email address for waitlist">
-          <button class="btn btn--primary" type="submit">Get VIP Access</button>
-        </form>
-        <div class="newsletter__success" id="newsletterSuccess">
-          You're on the VIP list! We'll reach out with updates on our US launch.
-        </div>
+        <div id="newsletterSuccess">You're on the list! We'll keep you posted on the US launch.</div>
       </div>
     </div>
   </section>
 
   </main>
 
-  <!-- ═══════════════════════════════════════════════════════════════════════
-       FOOTER
-       ═══════════════════════════════════════════════════════════════════════ -->
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p class="site-footer__tagline">Born in China. Raised in Nashville. Coming Home to the USA.</p>
-      <div class="site-footer__socials">
-        <a href="https://www.instagram.com/chenchens.hotchicken/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.tiktok.com/@chenchenshotchicken" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://www.facebook.com/chenchenshotchicken" target="_blank" rel="noopener">Facebook</a>
+  <!-- FOOTER -->
+  <footer class="site-footer" id="social">
+    <div class="container footer-grid">
+      <div class="footer-social-links">
+        <h4>SOCIAL LINKS</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/chenchenshotchicken" target="_blank" rel="noopener" aria-label="Facebook">F</a>
+          <a href="#" aria-label="Twitter">T</a>
+          <a href="https://www.instagram.com/chenchens.hotchicken/" target="_blank" rel="noopener" aria-label="Instagram">I</a>
+          <a href="https://www.tiktok.com/@chenchenshotchicken" target="_blank" rel="noopener" aria-label="TikTok">Y</a>
+        </div>
       </div>
-      <div class="site-footer__country-switch">
-        <a class="site-nav__country" href="../?stay" onclick="try{localStorage.removeItem('cc_country')}catch(e){}">United States · Switch Country</a>
+      <div class="footer-ig">
+        <h4>INSTAGRAM FEED</h4>
+        <div class="ig-grid" id="instagramFeedGrid">
+          <img src="../assets/sando.jpg" alt="Instagram 1" loading="lazy">
+          <img src="../assets/shrimp_hoagie.jpg" alt="Instagram 2" loading="lazy">
+          <img src="../assets/rice_bowl.jpg" alt="Instagram 3" loading="lazy">
+          <img src="../assets/spicy_wings.jpg" alt="Instagram 4" loading="lazy">
+        </div>
       </div>
-      <p class="site-footer__copyright">© 2026 Chen Chen's Nashville Hot Chicken. All rights reserved.</p>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 CHEN CHEN'S NASHVILLE HOT CHICKEN</span>
+        <span>USA EXPANSION.</span>
+      </div>
     </div>
   </footer>
 
-  <!-- No sticky mobile order bar for US pre-launch (no ordering available yet) -->
-
-  <!-- Scripts -->
-  <script src="../assets/config-us.js?v=1.6"></script>
-  <script src="../assets/site.js?v=1.6"></script>
+  <script src="../assets/config-us.js?v=2.0"></script>
+  <script src="../assets/site.js?v=2.0"></script>
 </body>
 </html>
