@@ -7,7 +7,7 @@
 
 :root {
   /* Brand Palette */
-  --bg-paper:        #F4EFEB;
+  --bg-paper:        #F6F4EB; /* Adjusted cream */
   --charcoal:        #151515;
   --charcoal-light:  #252525;
   --blood-red:       #D82A1B;
@@ -172,13 +172,7 @@ body.has-banner .site-header { top: 38px; }
 }
 
 .site-header__logo { display: flex; align-items: center; }
-.site-header__logo img { height: 40px; }
-.site-header__logo-text {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  margin-left: 1rem;
-  color: var(--charcoal);
-}
+.site-header__logo img { height: 60px; width: auto; object-fit: contain; }
 
 .site-nav { display: flex; gap: 2.5rem; align-items: center; }
 
@@ -231,7 +225,6 @@ body.has-banner .site-header { top: 38px; }
 @media (max-width: 960px) {
   .site-header .container { justify-content: center; position: relative; }
   .site-header__logo { position: absolute; left: 50%; transform: translateX(-50%); }
-  .site-header__logo-text { display: none; }
   .nav-toggle { display: block; position: absolute; right: var(--gutter); }
   
   .site-nav {
