@@ -306,10 +306,10 @@ body.has-banner .site-header { top: 38px; }
   display: block;
 }
 
-.hero__content { position: relative; z-index: 10; margin-left: 0; }
+.hero__content { position: relative; margin-left: 0; padding-left: 2rem; }
 
 @media (max-width: 960px) {
-  .hero__content { margin-left: 0; margin-top: -15%; padding: 0 1rem; }
+  .hero__content { margin-left: 0; padding-left: 1rem; margin-top: -15%; padding: 0 1rem; }
 }
 
 .hero__title {
@@ -317,7 +317,7 @@ body.has-banner .site-header { top: 38px; }
   flex-direction: column;
   margin-bottom: 1.5rem;
   line-height: 0.85;
-  margin-left: -15%;
+  margin-left: calc(-15% - 2rem);
 }
 
 @media (max-width: 960px) {
@@ -325,7 +325,8 @@ body.has-banner .site-header { top: 38px; }
 }
 
 .text-adaptive {
-  color: var(--charcoal);
+  color: var(--white);
+  mix-blend-mode: difference;
 }
 
 .hero__desc {
