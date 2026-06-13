@@ -632,11 +632,13 @@ body.has-banner .site-header { top: 38px; }
   color: var(--bg-paper);
   padding: 0.5rem 0;
   overflow: hidden;
-  border-top: var(--border-thick);
-  border-bottom: var(--border-thick);
+  border-top: 3px solid var(--blood-red);
+  border-bottom: 3px solid var(--blood-red);
 }
 .ticker__track {
-  display: flex; width: max-content;
+  display: flex; 
+  align-items: center;
+  width: max-content;
   animation: ticker-scroll 35s linear infinite;
 }
 .ticker__item {
@@ -646,7 +648,11 @@ body.has-banner .site-header { top: 38px; }
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-.ticker__separator { color: var(--blood-red); }
+.ticker__separator { 
+  color: var(--blood-red); 
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
 @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* ── Utilities ─────────────────────────────────────────────────────────────── */
