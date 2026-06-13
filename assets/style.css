@@ -172,7 +172,18 @@ body.has-banner .site-header { top: 38px; }
 }
 
 .site-header__logo { display: flex; align-items: center; }
-.site-header__logo img { height: 60px; width: auto; object-fit: contain; }
+.site-header__logo img { 
+  height: 120px; 
+  width: auto; 
+  object-fit: contain; 
+  transform: translateY(30px);
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.15));
+  transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+.site-header.scrolled .site-header__logo img {
+  height: 80px;
+  transform: translateY(20px);
+}
 
 .site-nav { display: flex; gap: 2.5rem; align-items: center; }
 
