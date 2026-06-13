@@ -173,10 +173,10 @@ body.has-banner .site-header { top: 38px; }
 
 .site-header__logo { display: flex; align-items: center; }
 .site-header__logo img { 
-  height: 180px; 
+  height: 140px; 
   width: auto; 
   object-fit: contain; 
-  transform: translateY(45px);
+  transform: translateY(30px);
   filter: drop-shadow(0 4px 12px rgba(0,0,0,.15));
   transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
 }
@@ -236,8 +236,8 @@ body.has-banner .site-header { top: 38px; }
 @media (max-width: 960px) {
   .site-header .container { justify-content: center; position: relative; }
   .site-header__logo { position: absolute; left: 50%; transform: translateX(-50%); }
-  .site-header__logo img { height: 120px; transform: translateY(30px); }
-  .site-header.scrolled .site-header__logo img { height: 70px; transform: translateY(15px); }
+  .site-header__logo img { height: 100px; transform: translateY(10px); }
+  .site-header.scrolled .site-header__logo img { height: 70px; transform: translateY(5px); }
   .nav-toggle { display: block; position: absolute; right: var(--gutter); }
   
   .site-nav {
@@ -287,26 +287,35 @@ body.has-banner .site-header { top: 38px; }
   .hero { padding-top: calc(var(--header-h) + 5rem); }
 }
 
-.hero .grid-2 { gap: 2rem; align-items: start; }
+.hero .grid-2 { gap: 0; align-items: center; }
 
 .hero__image-box {
-  background: var(--charcoal);
-  padding: 1rem;
-  /* Rough edge effect using clip-path */
-  clip-path: polygon(1% 1%, 99% 0%, 100% 98%, 0% 100%);
+  position: relative;
+  width: 100%;
 }
 
 .hero__image-box img {
   width: 100%;
-  filter: contrast(1.1) brightness(0.9);
+  height: auto;
+  display: block;
 }
 
-.hero__content { padding-top: 2rem; position: relative; }
+.hero__content { position: relative; z-index: 10; margin-left: -15%; }
+
+@media (max-width: 960px) {
+  .hero__content { margin-left: 0; margin-top: -15%; padding: 0 1rem; }
+}
 
 .hero__title {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
+  line-height: 0.85;
+}
+
+.text-adaptive {
+  color: var(--white);
+  mix-blend-mode: difference;
 }
 
 .hero__desc {
