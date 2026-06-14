@@ -378,6 +378,10 @@ body.has-banner .site-header { top: 38px; }
   line-height: 0.85;
 }
 
+.hero__title > span {
+  white-space: nowrap;
+}
+
 @media (max-width: 960px) {
   .hero__title { margin-left: 0; font-size: clamp(2.5rem, 11vw, 4rem); }
 }
