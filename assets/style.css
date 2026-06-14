@@ -287,8 +287,20 @@ body.has-banner .site-header { top: 38px; }
 
 /* ── Hero Section ──────────────────────────────────────────────────────────── */
 .hero {
+  position: relative;
   padding-top: 4rem;
   padding-bottom: 2rem;
+  background: var(--charcoal);
+  color: var(--bg-paper);
+  overflow: hidden;
+}
+
+@media (min-width: 961px) {
+  .hero { 
+    min-height: 85vh; 
+    display: flex; 
+    align-items: center; 
+  }
 }
 
 @media (max-width: 960px) {
@@ -296,7 +308,20 @@ body.has-banner .site-header { top: 38px; }
   .hero .container { padding: 0; }
 }
 
-.hero .grid-2 { gap: 0; align-items: center; }
+.hero .grid-2 { 
+  gap: 0; 
+  align-items: center; 
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 961px) {
+  .hero .grid-2 {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
 
 .hero__image-box {
   position: relative;
@@ -309,7 +334,39 @@ body.has-banner .site-header { top: 38px; }
   display: block;
 }
 
-.hero__content { position: relative; margin-left: 0; padding-left: 2rem; }
+@media (min-width: 961px) {
+  .hero__image-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65vw;
+    height: 100%;
+    z-index: 0;
+  }
+  .hero__image-box img {
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+  }
+  .hero__image-box::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: linear-gradient(to right, transparent 50%, var(--charcoal) 100%);
+  }
+}
+
+.hero__content { 
+  position: relative; 
+  margin-left: 0; 
+  padding-left: 2rem; 
+}
+
+@media (min-width: 961px) {
+  .hero__content {
+    width: 50%;
+  }
+}
 
 @media (max-width: 960px) {
   .hero__content { margin-left: 0; margin-top: 1.5rem; padding: 0 var(--gutter); }
@@ -328,10 +385,10 @@ body.has-banner .site-header { top: 38px; }
 }
 
 .text-cream { color: var(--bg-paper); }
-.text-charcoal { color: var(--charcoal-light); }
+.text-charcoal { color: var(--text-muted); }
 
 @media (max-width: 960px) {
-  .text-cream { color: var(--charcoal-light); }
+  .text-cream { color: var(--bg-paper); }
 }
 
 .hero__desc {
