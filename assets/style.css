@@ -287,12 +287,12 @@ body.has-banner .site-header { top: 38px; }
 
 /* ── Hero Section ──────────────────────────────────────────────────────────── */
 .hero {
-  padding-top: calc(var(--header-h) + 6rem);
+  padding-top: 4rem;
   padding-bottom: 2rem;
 }
 
 @media (max-width: 960px) {
-  .hero { padding-top: var(--header-h); }
+  .hero { padding-top: 0; }
   .hero .container { padding: 0; }
 }
 
@@ -639,6 +639,7 @@ body.has-banner .site-header { top: 38px; }
   overflow: hidden;
   border-top: 3px solid var(--blood-red);
   border-bottom: 3px solid var(--blood-red);
+  margin-top: var(--header-h);
 }
 .ticker__track {
   display: flex; 
