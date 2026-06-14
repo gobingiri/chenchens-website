@@ -11,6 +11,7 @@
   --charcoal:        #151515;
   --charcoal-light:  #252525;
   --blood-red:       #D82A1B;
+  --mustard-yellow:  #FDCF09;
   --white:           #FFFFFF;
   --text-muted:      #6B6661;
   
@@ -77,7 +78,7 @@ p { font-size: 1.05rem; }
 strong { font-weight: 800; }
 
 .text-red { color: var(--blood-red); }
-.text-yellow { color: #fdcf09; }
+.text-yellow { color: var(--mustard-yellow); }
 
 /* ── Layout ────────────────────────────────────────────────────────────────── */
 .container {
@@ -228,7 +229,7 @@ body.has-banner .site-header { top: 38px; }
   display: block;
   width: 100%;
   height: 3px;
-  background: var(--bg-paper);
+  background: var(--mustard-yellow);
   position: absolute;
   transition: 0.2s;
 }
@@ -649,7 +650,7 @@ body.has-banner .site-header { top: 38px; }
   letter-spacing: 0.1em;
 }
 .ticker__separator { 
-  color: var(--blood-red); 
+  color: var(--mustard-yellow); 
   font-family: var(--font-display);
   font-size: 1.5rem;
 }
