@@ -641,6 +641,17 @@ body.has-banner .site-header { top: 38px; }
   border-bottom: 3px solid var(--blood-red);
   margin-top: var(--header-h);
 }
+
+.ticker--mobile {
+  display: none;
+  margin-top: 0; /* Remove header offset since it's below the image */
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .ticker--desktop { display: none; }
+  .ticker--mobile { display: block; }
+}
 .ticker__track {
   display: flex; 
   align-items: center;
