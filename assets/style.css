@@ -164,7 +164,7 @@ section { padding: var(--section-pad) 0; }
   left: 0;
   width: 100%;
   z-index: 100;
-  background: var(--charcoal);
+  background: var(--bg-paper);
   border-bottom: 3px solid var(--blood-red);
   height: var(--header-h);
   transition: top 0.3s;
@@ -198,19 +198,24 @@ body.has-banner .site-header { top: 38px; }
 .site-nav__link {
   font-family: var(--font-display);
   font-size: 1.4rem;
-  color: var(--bg-paper);
+  color: var(--blood-red);
   letter-spacing: 0.05em;
 }
 
-.site-nav__link:hover { color: var(--blood-red); }
+.site-nav__link:hover { color: var(--charcoal); }
 
 .site-nav__country {
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.8rem;
   text-transform: uppercase;
-  border: 2px solid var(--bg-paper);
+  border: 2px solid var(--blood-red);
   padding: 0.3rem 0.8rem;
+  color: var(--blood-red);
+}
+
+.site-nav__country:hover {
+  background: var(--blood-red);
   color: var(--bg-paper);
 }
 
@@ -229,7 +234,7 @@ body.has-banner .site-header { top: 38px; }
   display: block;
   width: 100%;
   height: 3px;
-  background: var(--mustard-yellow);
+  background: var(--blood-red);
   position: absolute;
   transition: 0.2s;
 }
@@ -254,7 +259,7 @@ body.has-banner .site-header { top: 38px; }
     right: -100%;
     width: 300px;
     height: 100vh;
-    background: var(--charcoal);
+    background: var(--bg-paper);
     flex-direction: column;
     justify-content: center;
     padding: 3rem;
@@ -263,8 +268,8 @@ body.has-banner .site-header { top: 38px; }
     border-color: var(--blood-red);
   }
   .site-nav.open { right: 0; }
-  .site-nav__link { color: var(--bg-paper); font-size: 2.5rem; }
-  .site-nav__country { color: var(--bg-paper); border-color: var(--bg-paper); }
+  .site-nav__link { color: var(--blood-red); font-size: 2.5rem; }
+  .site-nav__country { color: var(--blood-red); border-color: var(--blood-red); }
 }
 
 /* ── Opening Banner ────────────────────────────────────────────────────────── */
