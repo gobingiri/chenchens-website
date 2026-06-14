@@ -376,7 +376,6 @@ body.has-banner .site-header { top: 38px; }
   flex-direction: column;
   margin-bottom: 1.5rem;
   line-height: 0.85;
-  margin-left: calc(-15% - 2rem);
 }
 
 @media (max-width: 960px) {
