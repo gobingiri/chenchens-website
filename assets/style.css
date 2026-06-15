@@ -226,6 +226,15 @@ body.has-banner .site-header { top: 38px; }
   color: var(--bg-paper);
 }
 
+@media (min-width: 961px) {
+  .site-nav__country {
+    position: absolute;
+    left: calc(((50vw - min(50vw, 650px)) + var(--gutter)) / 2);
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 /* Mobile Nav */
 .nav-toggle {
   display: none;
@@ -255,6 +264,7 @@ body.has-banner .site-header { top: 38px; }
 
 @media (max-width: 960px) {
   .site-header .container { justify-content: center; position: relative; }
+  .site-header__left { position: absolute; left: var(--gutter); }
   .site-header__logo { position: absolute; left: 50%; transform: translateX(-50%); }
   .site-header__logo img { height: 100px; transform: translateY(20px); }
   .site-header.scrolled .site-header__logo img { height: 70px; transform: translateY(10px); }
