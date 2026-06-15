@@ -302,8 +302,9 @@ body.has-banner .site-header { top: 38px; }
   border-bottom: var(--border-thick);
 }
 .banner-close {
-  position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
+  position: absolute; right: 0; top: 50%; transform: translateY(-50%);
   background: none; border: none; color: var(--bg-paper); cursor: pointer; font-size: 1.5rem;
+  padding: 1rem; z-index: 200;
 }
 
 /* ── Hero Section ──────────────────────────────────────────────────────────── */
@@ -351,6 +352,14 @@ body.has-banner .site-header { top: 38px; }
   width: 100%;
   height: auto;
   display: block;
+}
+
+@media (max-width: 960px) {
+  .hero__image-box img {
+    height: 45vh;
+    object-fit: cover;
+    object-position: 75% center;
+  }
 }
 
 @media (min-width: 961px) {
