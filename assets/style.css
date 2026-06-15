@@ -226,7 +226,7 @@ body.has-banner .site-header { top: 38px; }
   color: var(--bg-paper);
 }
 
-@media (min-width: 961px) {
+@media (min-width: 1400px) {
   .site-nav__country {
     position: absolute;
     left: calc(((50vw - min(50vw, 650px)) + var(--gutter)) / 2);
