@@ -63,9 +63,14 @@
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="container">
-      <a class="site-header__logo" href="#top" aria-label="Chen Chen's — back to top">
-        <img src="../assets/logo_circle.png" alt="Chen Chen's Logo">
-      </a>
+      <div class="site-header__left">
+        <a class="site-nav__country" href="../?stay" onclick="try{localStorage.removeItem('cc_country')}catch(e){}">
+          US
+        </a>
+        <a class="site-header__logo" href="#top" aria-label="Chen Chen's — back to top">
+          <img src="../assets/logo_circle.png" alt="Chen Chen's Logo">
+        </a>
+      </div>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -75,10 +80,8 @@
         <a class="site-nav__link" href="#chef">CHEF</a>
         <a class="site-nav__link" href="#location">LOCATIONS</a>
         <a class="site-nav__link" href="#catering">CATERING</a>
+        <a class="site-nav__link" href="#press">PRESS</a>
         <a class="site-nav__link" href="#newsletter">WAITLIST</a>
-        <a class="site-nav__country" href="../?stay" onclick="try{localStorage.removeItem('cc_country')}catch(e){}">
-          US
-        </a>
       </nav>
     </div>
   </header>
@@ -253,6 +256,35 @@
           <button type="submit" class="cat-submit">SUBSCRIBE</button>
         </form>
         <div id="newsletterSuccess">You're on the list! We'll keep you posted on the US launch.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS -->
+  <section id="press">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 3rem;">IN THE PRESS</h2>
+      <div class="press-grid">
+        <a href="https://www.youtube.com/watch?v=Ak3dgCzGqic" target="_blank" class="press-card">
+          <div class="press-card__source">YouTube / BlogTO</div>
+          <h3 class="press-card__title">Chen Chen's is Toronto's destination for hot chicken mac n' cheese</h3>
+          <p class="press-card__excerpt">"Chen Chen's is a fried chicken joint in Toronto specializing in Nashville hot chicken. They've popped up all over the city..."</p>
+          <span class="press-card__cta">WATCH VIDEO &rarr;</span>
+        </a>
+        
+        <a href="https://www.blogto.com/eat_drink/2022/05/j-cole-chen-chen-restaurant-toronto/" target="_blank" class="press-card">
+          <div class="press-card__source">BlogTO</div>
+          <h3 class="press-card__title">J. Cole spotted eating at Toronto's Chen Chen's Nashville Hot Chicken</h3>
+          <p class="press-card__excerpt">"One of the biggest rappers in the game right now was just spotted at an unassuming Toronto hot chicken joint..."</p>
+          <span class="press-card__cta">READ ARTICLE &rarr;</span>
+        </a>
+
+        <a href="https://streetsoftoronto.com/food/restaurants/heres-where-to-find-the-best-nashville-hot-chicken-in-toronto/" target="_blank" class="press-card">
+          <div class="press-card__source">Streets of Toronto</div>
+          <h3 class="press-card__title">Here's where to find the best Nashville hot chicken in Toronto</h3>
+          <p class="press-card__excerpt">"Chen Chen's Nashville Hot Chicken has brought Southern heat paired with bold Asian twist flavours to the city..."</p>
+          <span class="press-card__cta">READ ARTICLE &rarr;</span>
+        </a>
       </div>
     </div>
   </section>
