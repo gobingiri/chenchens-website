@@ -782,18 +782,19 @@ body.has-banner .site-header { top: 38px; }
   gap: 1rem;
   padding: 2rem;
   border: var(--border-thick) solid var(--charcoal);
-  background: var(--bg-paper);
-  color: var(--charcoal);
+  background: var(--charcoal);
+  color: var(--bg-paper);
+  transform: translateY(-8px);
+  box-shadow: 8px 8px 0 var(--blood-red);
   transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
   text-decoration: none;
 }
 
 .press-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 8px 8px 0 var(--blood-red);
-  background: var(--charcoal);
-  color: var(--bg-paper);
-  border-color: var(--charcoal);
+  transform: translateY(0);
+  box-shadow: 0 0 0 var(--blood-red);
+  background: var(--bg-paper);
+  color: var(--charcoal);
 }
 
 .press-card__source {
@@ -815,21 +816,22 @@ body.has-banner .site-header { top: 38px; }
   font-size: 1.1rem;
   line-height: 1.5;
   flex-grow: 1;
+  color: var(--text-muted);
 }
 
 .press-card:hover .press-card__excerpt {
-  color: var(--text-muted);
+  color: var(--charcoal);
 }
 
 .press-card__cta {
   font-family: var(--font-display);
   font-size: 1.2rem;
-  color: var(--blood-red);
+  color: var(--mustard-yellow);
   margin-top: 1rem;
   display: inline-block;
   transition: 0.3s;
 }
 
 .press-card:hover .press-card__cta {
-  color: var(--mustard-yellow);
+  color: var(--blood-red);
 }
