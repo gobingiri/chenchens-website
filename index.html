@@ -28,7 +28,7 @@
   <meta property="og:description" content="Bold Southern heat with a chef-driven Asian twist. Ranked #1 on Yelp Canada. Choose your country to order.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.chenchenshotchicken.com/">
-  <meta property="og:image" content="https://www.chenchenshotchicken.com/assets/hero_chicken.jpg">
+  <meta property="og:image" content="https://www.chenchenshotchicken.com/assets/hero_combo.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +36,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* ── Base Reset ────────────────────────────────────────────────────────── */
+    :root {
+      --bg-paper:        #F5F1E5;
+      --charcoal:        #151515;
+      --charcoal-light:  #252525;
+      --blood-red:       #D82A1B;
+      --mustard-yellow:  #FDCF09;
+      --white:           #FFFFFF;
+      --font-display:    'Bebas Neue', 'Impact', sans-serif;
+      --font-body:       'Inter', system-ui, sans-serif;
+      --border-thick:    3px solid var(--charcoal);
+    }
+
     *, *::before, *::after {
       margin: 0;
       padding: 0;
@@ -44,221 +55,211 @@
     }
     
     html {
-      scroll-behavior: smooth;
       -webkit-text-size-adjust: 100%;
     }
     
     body {
-      font-family: 'Inter', system-ui, sans-serif;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #1A1714;
-      background: #FBF7F2;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      font-family: var(--font-body);
+      background: var(--bg-paper);
       overflow-x: hidden;
-    }
-
-    /* ── Gradient text helper ── */
-    .gradient-text {
-      background: linear-gradient(135deg, #D42B2B, #FF6B35);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      display: inline-block;
-    }
-
-    /* ── Gateway Styles ── */
-    body.gateway {
       min-height: 100vh;
       min-height: 100dvh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem clamp(1rem, 4vw, 2rem);
-      position: relative;
-      overflow-x: hidden;
-      overflow-y: auto;
-      background: #1A1714;
-      color: #FBF7F2;
     }
 
-    body.gateway::before {
-      content: '';
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(212, 43, 43, .1) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .gateway__logo {
-      height: 160px;
-      width: auto;
-      margin-bottom: 2rem;
-      filter: drop-shadow(0 0 30px rgba(212, 43, 43, .3));
-      animation: gateway-logo 1s cubic-bezier(.4, 0, .2, 1) forwards;
-      position: relative;
-      z-index: 1;
-      transition: transform .35s cubic-bezier(.4, 0, .2, 1);
-    }
-    .gateway__logo:hover { transform: scale(1.03) rotate(-1deg); }
-
-    @keyframes gateway-logo {
-      from { transform: scale(.7) rotate(-8deg); opacity: 0; }
-      to   { transform: scale(1) rotate(0); opacity: 1; }
-    }
-
-    .gateway__title {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
-      text-align: center;
-      margin-bottom: .6rem;
-      position: relative;
-      z-index: 1;
-      color: #FBF7F2;
-      font-family: 'Bebas Neue', 'Impact', sans-serif;
-      letter-spacing: .02em;
-    }
-
-    .gateway__sub {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: .9rem;
-      text-transform: uppercase;
-      letter-spacing: .2em;
-      color: #FF6B35;
-      margin-bottom: 3rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .gateway__cards {
+    /* ── Split Layout ── */
+    .split-layout {
       display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      max-width: 700px;
+      flex: 1;
       width: 100%;
-      position: relative;
-      z-index: 1;
     }
 
-    .gateway__card {
-      background: rgba(255,255,255,.05);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      color: #FBF7F2;
-      text-decoration: none;
-      border-radius: 32px;
-      padding: 2.8rem 2.5rem;
-      width: 280px;
-      border: 1px solid rgba(255,255,255,.06);
-      transition: all .35s cubic-bezier(.4, 0, .2, 1);
+    .split-panel {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
+      justify-content: center;
+      text-decoration: none;
       position: relative;
+      transition: all 0.4s cubic-bezier(.4, 0, .2, 1);
+      cursor: pointer;
       overflow: hidden;
     }
 
-    .gateway__card::before {
+    /* Inner outline on hover */
+    .split-panel::after {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: transparent;
-      transition: background .18s cubic-bezier(.4, 0, .2, 1);
+      inset: 1rem;
+      border: 8px solid transparent;
+      transition: all 0.3s ease;
+      pointer-events: none;
     }
 
-    .gateway__card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(255,255,255,.1);
-      box-shadow: 0 16px 48px rgba(26, 23, 20, .14);
+    .split-panel:hover::after {
+      inset: 2rem;
     }
 
-    .gateway__card--ca:hover::before { background: #D42B2B; }
-    .gateway__card--ca:hover { box-shadow: 0 12px 40px rgba(212, 43, 43, .15); }
-    .gateway__card--us:hover::before { background: #FF6B35; }
-    .gateway__card--us:hover { box-shadow: 0 12px 40px rgba(255, 107, 53, .15); }
+    /* Left Panel (CA) */
+    .split-panel--ca {
+      background: var(--bg-paper);
+      color: var(--charcoal);
+    }
+    .split-panel--ca:hover {
+      background: var(--blood-red);
+      color: var(--bg-paper);
+    }
+    .split-panel--ca:hover::after {
+      border-color: var(--bg-paper);
+    }
 
-    .gateway__flag {
-      font-size: 3.2rem;
+    /* Right Panel (US) */
+    .split-panel--us {
+      background: var(--charcoal);
+      color: var(--bg-paper);
+    }
+    .split-panel--us:hover {
+      background: var(--mustard-yellow);
+      color: var(--charcoal);
+    }
+    .split-panel--us:hover::after {
+      border-color: var(--charcoal);
+    }
+
+    /* Center Logo */
+    .center-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 320px;
+      height: 320px;
+      z-index: 10;
+      pointer-events: none;
+      filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));
+      transition: transform 0.5s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    /* Make logo slightly pop when either panel is hovered */
+    .split-layout:hover .center-logo {
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    .panel-content {
+      text-align: center;
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .split-panel:hover .panel-content {
+      transform: scale(1.1);
+    }
+
+    .panel-title {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 10vw, 8rem);
+      line-height: 0.9;
       margin-bottom: 1rem;
-      transition: transform .35s cubic-bezier(.4, 0, .2, 1);
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,.3));
-    }
-    .gateway__card:hover .gateway__flag { transform: scale(1.15) rotate(3deg); }
-
-    .gateway__card h2 {
-      font-size: 1.4rem;
-      margin-bottom: .5rem;
-      color: #FBF7F2;
-      font-family: 'Space Grotesk', sans-serif;
+      text-transform: uppercase;
     }
 
-    .gateway__card-sub {
-      font-size: .88rem;
-      color: #A39888;
-      font-family: 'Space Grotesk', sans-serif;
+    .panel-sub {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
-    .gateway__remember {
-      margin-top: 2.5rem;
-      font-size: .85rem;
-      color: #A39888;
-      display: inline-flex;
+    /* Toggle Switch */
+    .remember-bar {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      display: flex;
       align-items: center;
-      gap: .5rem;
+      gap: 1rem;
+      background: var(--charcoal);
+      color: var(--bg-paper);
+      padding: 0.8rem 1.5rem;
+      border: 3px solid var(--mustard-yellow);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      box-shadow: 4px 4px 0 var(--mustard-yellow);
       cursor: pointer;
-      user-select: none;
-      background: rgba(255,255,255,.03);
-      padding: .45rem 1.1rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.06);
+      transition: 0.2s;
+    }
+
+    .remember-bar:hover {
+      transform: translateX(-50%) translateY(-2px);
+      box-shadow: 6px 6px 0 var(--mustard-yellow);
+    }
+
+    .remember-bar input[type="checkbox"] {
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--mustard-yellow);
+      background: transparent;
+      cursor: pointer;
       position: relative;
-      z-index: 1;
-      font-family: 'Space Grotesk', sans-serif;
     }
 
-    .gateway__remember input {
-      accent-color: #D42B2B;
-      width: 15px;
-      height: 15px;
+    .remember-bar input[type="checkbox"]:checked {
+      background: var(--mustard-yellow);
+    }
+    
+    .remember-bar input[type="checkbox"]:checked::after {
+      content: 'X';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--charcoal);
+      font-family: var(--font-display);
+      font-size: 1.2rem;
     }
 
-    @media (max-width: 480px) {
-      .gateway__cards { flex-direction: column; align-items: center; }
-      .gateway__card { width: 100%; max-width: 340px; }
+    @media (max-width: 900px) {
+      .split-layout {
+        flex-direction: column;
+      }
+      .center-logo {
+        width: 200px;
+        height: 200px;
+      }
+      .remember-bar {
+        bottom: 1rem;
+      }
     }
   </style>
 </head>
-<body class="gateway">
+<body>
 
-  <img class="gateway__logo" src="assets/logo_circle.png" alt="Chen Chen's Nashville Hot Chicken — fire-breathing chicken logo" width="320" height="320">
+  <img class="center-logo" src="assets/logo_circle.png" alt="Chen Chen's Nashville Hot Chicken">
 
-  <h1 class="gateway__title">Southern Heat.<br><span class="gradient-text">Asian Twist.</span></h1>
-  <p class="gateway__sub">Choose your country</p>
-
-  <div class="gateway__cards">
-    <a class="gateway__card gateway__card--ca" href="ca/" id="cardCanada" onclick="rememberCountry('ca')">
-      <h2>Canada</h2>
-      <span class="gateway__card-sub">Toronto — The Well</span>
+  <div class="split-layout">
+    <a class="split-panel split-panel--ca" href="ca/" id="cardCanada" onclick="rememberCountry('ca')">
+      <div class="panel-content">
+        <h1 class="panel-title">Canada</h1>
+        <div class="panel-sub">Toronto — The Well</div>
+      </div>
     </a>
-    <a class="gateway__card gateway__card--us" href="us/" id="cardUS" onclick="rememberCountry('us')">
-      <h2>United States</h2>
-      <span class="gateway__card-sub">Coming Soon</span>
+    
+    <a class="split-panel split-panel--us" href="us/" id="cardUS" onclick="rememberCountry('us')">
+      <div class="panel-content">
+        <h1 class="panel-title">USA</h1>
+        <div class="panel-sub">Coming Soon</div>
+      </div>
     </a>
   </div>
 
-  <label class="gateway__remember" id="rememberLabel">
+  <label class="remember-bar">
     <input type="checkbox" id="rememberCheck" checked>
     <span>Remember my choice</span>
   </label>
