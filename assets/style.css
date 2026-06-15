@@ -358,7 +358,7 @@ body.has-banner .site-header { top: 38px; }
   .hero__image-box img {
     height: 45vh;
     object-fit: cover;
-    object-position: 75% center;
+    object-position: 65% center;
   }
 }
 
