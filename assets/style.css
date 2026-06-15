@@ -367,7 +367,7 @@ body.has-banner .site-header { top: 38px; }
     position: absolute;
     top: 0;
     left: 0;
-    width: 60vw;
+    width: 55vw;
     height: 100%;
     z-index: 0;
   }
@@ -414,6 +414,12 @@ body.has-banner .site-header { top: 38px; }
   flex-direction: column;
   margin-bottom: 1.5rem;
   line-height: 0.85;
+}
+
+@media (min-width: 961px) {
+  .hero__title {
+    font-size: clamp(3rem, 5.5vw, 7.5rem);
+  }
 }
 
 .hero__title > span {
