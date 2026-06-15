@@ -183,6 +183,7 @@ body.has-banner .site-header { top: 38px; }
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  height: 100%;
 }
 
 .site-header__logo { display: flex; align-items: center; }
