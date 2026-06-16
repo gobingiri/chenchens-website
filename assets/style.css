@@ -380,7 +380,7 @@ body.has-banner .site-header { top: 38px; }
     content: '';
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
-    background: linear-gradient(to right, transparent 70%, var(--charcoal) 100%);
+    background: linear-gradient(to right, transparent 40%, var(--charcoal) 95%);
   }
 }
 
