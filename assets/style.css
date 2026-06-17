@@ -386,7 +386,7 @@ body.has-banner .site-header { top: 38px; }
     position: absolute;
     top: 0;
     left: 0;
-    width: 55vw;
+    width: 60vw;
     height: 100%;
     z-index: 0;
   }
@@ -412,7 +412,7 @@ body.has-banner .site-header { top: 38px; }
 
 @media (min-width: 961px) {
   .hero__content {
-    width: 50%;
+    width: 42%;
   }
 }
 
