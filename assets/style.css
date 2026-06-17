@@ -574,10 +574,6 @@ body.has-banner .site-header { top: 38px; }
   line-height: 1.4;
 }
 
-/* Interactive Heat JS Hook */
-.heat__card { background: none; border: none; text-align: left; cursor: pointer; color: inherit; width: 100%; display: block;}
-.heat__card.active .burn-card__title { color: var(--blood-red); }
-
 /* Menu Panel */
 .menu-panel {
   padding: 2rem;
@@ -785,7 +781,6 @@ body.has-banner .site-header { top: 38px; }
   color: var(--bg-paper);
   padding: 0.5rem 0;
   overflow: hidden;
-  border-top: 3px solid var(--blood-red);
   border-bottom: 3px solid var(--blood-red);
   margin-top: var(--header-h);
 }
@@ -822,8 +817,6 @@ body.has-banner .site-header { top: 38px; }
 @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* ── Utilities ─────────────────────────────────────────────────────────────── */
-.badge { display: none; } /* Removed badges for clean look */
-
 /* Mobile Order Bar */
 .mobile-order-bar {
   display: none;
