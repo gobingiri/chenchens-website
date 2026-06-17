@@ -42,7 +42,26 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--blood-red) var(--charcoal);
+  scrollbar-width: thin;
   scroll-padding-top: var(--header-h);
+}
+
+/* WebKit Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--charcoal);
+  border-left: 2px solid var(--charcoal-light);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blood-red);
+  border: 3px solid var(--charcoal);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff3333; /* slightly brighter on hover */
 }
 
 body {
