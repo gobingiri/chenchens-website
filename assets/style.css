@@ -789,6 +789,7 @@ body.has-banner .site-header { top: 38px; }
   display: none;
   margin-top: 0; /* Remove header offset since it's below the image */
   width: 100%;
+  border-top: 5px solid var(--blood-red);
 }
 
 @media (max-width: 960px) {
