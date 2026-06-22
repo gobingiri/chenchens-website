@@ -830,7 +830,11 @@ body.has-banner .site-header { top: 38px; }
 
 /* ── Press Section ───────────────────────────────────────────────────────────── */
 #press {
-  background: var(--bg-paper);
+  background: var(--charcoal);
+}
+
+#press h2 {
+  color: var(--bg-paper);
 }
 
 .press-grid {
@@ -844,9 +848,9 @@ body.has-banner .site-header { top: 38px; }
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
-  border: var(--border-thick) solid var(--charcoal);
-  background: var(--charcoal);
-  color: var(--bg-paper);
+  border: var(--border-thick) solid var(--bg-paper);
+  background: var(--bg-paper);
+  color: var(--charcoal);
   transform: translateY(-8px);
   box-shadow: 8px 8px 0 var(--blood-red);
   transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
@@ -856,8 +860,8 @@ body.has-banner .site-header { top: 38px; }
 .press-card:hover {
   transform: translateY(0);
   box-shadow: 0 0 0 var(--blood-red);
-  background: var(--bg-paper);
-  color: var(--charcoal);
+  background: var(--charcoal);
+  color: var(--bg-paper);
 }
 
 .press-card__source {
@@ -883,18 +887,18 @@ body.has-banner .site-header { top: 38px; }
 }
 
 .press-card:hover .press-card__excerpt {
-  color: var(--charcoal);
+  color: var(--bg-paper);
 }
 
 .press-card__cta {
   font-family: var(--font-display);
   font-size: 1.2rem;
-  color: var(--mustard-yellow);
+  color: var(--blood-red);
   margin-top: 1rem;
   display: inline-block;
   transition: 0.3s;
 }
 
 .press-card:hover .press-card__cta {
-  color: var(--blood-red);
+  color: var(--mustard-yellow);
 }
