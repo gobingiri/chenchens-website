@@ -45,6 +45,7 @@ html {
   scrollbar-color: var(--blood-red) var(--charcoal);
   scrollbar-width: thin;
   scroll-padding-top: var(--header-h);
+  overscroll-behavior-y: none;
 }
 
 /* WebKit Scrollbar Styling */
@@ -629,13 +630,19 @@ body.has-banner .site-header { top: 38px; }
 }
 
 /* ── Chef Section ──────────────────────────────────────────────────────────── */
-.chef { border-top: var(--border-thick); border-bottom: var(--border-thick); margin-top: 5rem;}
+.chef { 
+  background: var(--charcoal);
+  color: var(--bg-paper);
+  border-top: var(--border-thick); 
+  border-bottom: var(--border-thick); 
+  padding: 5rem 0;
+}
 .chef .container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
 
 .chef__img-wrap { position: relative; }
 .chef__img-wrap img {
   filter: grayscale(100%) contrast(1.2);
-  border: var(--border-thick);
+  border: 3px solid var(--bg-paper);
 }
 .chef__stamp {
   position: absolute;
