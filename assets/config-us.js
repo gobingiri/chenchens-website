@@ -16,7 +16,7 @@ const COUNTRY_CONFIG = {
   tagline: 'Born in China. Raised in Nashville. Finally Home to the USA.',
   heroHeadline: 'Nashville Heat.<br><span class="gradient-text">Asian Soul.</span>',
   heroSubline: 'Finally Home.',
-  heroCopy: 'The chef-driven Nashville hot chicken that conquered Toronto is crossing the border — bold Szechuan-fused flavors, crispy and handcrafted from scratch. Ranked #1 on Yelp Canada\'s Top 100. Proudly Halal. America, get ready.',
+  heroCopy: 'Chef-Driven Nashville Hot Chicken, Inspired by Southern Tradition and Asian Roots.',
   metaTitle: "Chen Chen's Nashville Hot Chicken | Coming to the United States",
   metaDescription: "Chen Chen's Nashville Hot Chicken is expanding to the USA. Bold Southern flavors with a chef-driven Asian twist. Halal, crispy, made from scratch. Join our VIP waitlist.",
 

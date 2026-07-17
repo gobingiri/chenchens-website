@@ -16,7 +16,7 @@ const COUNTRY_CONFIG = {
   tagline: 'Born in China. Raised in Nashville. Served in Toronto.',
   heroHeadline: 'Nashville Heat.<br><span class="gradient-text">Asian Soul.</span>',
   heroSubline: 'Toronto Made.',
-  heroCopy: 'Chef-driven Nashville hot chicken fused with bold Szechuan flavors — crispy, juicy, and handcrafted from scratch. Ranked #1 on Yelp Canada\'s Top 100 Places to Eat. Proudly Halal.',
+  heroCopy: 'Chef-Driven Nashville Hot Chicken, Inspired by Southern Tradition and Asian Roots.',
   metaTitle: "Chen Chen's Nashville Hot Chicken | Toronto, Canada | Yelp's #1",
   metaDescription: "Chen Chen's Nashville Hot Chicken — bold Southern flavors with a chef-driven Asian twist. Halal, crispy, made from scratch at The Well, Toronto. Ranked #1 on Yelp Canada.",
 
