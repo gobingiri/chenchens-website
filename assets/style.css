@@ -680,7 +680,7 @@ body.has-banner .site-header { top: 38px; }
 .location-box { position: relative; }
 .location-box__map {
   border: var(--border-thick);
-  background: url('../assets/map_graphic.jpg') center/cover;
+  background: #EAE5DE;
   height: 250px;
   position: relative;
   margin-bottom: 1.5rem;
