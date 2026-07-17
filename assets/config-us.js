@@ -31,8 +31,8 @@ const COUNTRY_CONFIG = {
       name: 'Nashville Flagship',
       shortName: 'Nashville',
       address: '130 19th Ave N, Nashville, TN 37203',
-      phone: '',
-      phoneTel: '',
+      phone: '(615) 964-7044',
+      phoneTel: '+16159647044',
       email: '[TODO: us@chenchenshotchicken.com]',
       timezone: 'America/Chicago',              // TODO: Adjust for actual city
       hours: [
