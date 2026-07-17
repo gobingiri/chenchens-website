@@ -28,11 +28,11 @@ const COUNTRY_CONFIG = {
   /* ── Locations ───────────────────────────────────────── */
   locations: [
     {
-      name: '[TODO: US Location Name]',        // e.g. 'Midtown — Houston'
-      shortName: '[TODO: Short Name]',          // e.g. 'Midtown'
-      address: '[TODO: Full US Address]',       // e.g. '123 Main St, Houston, TX 77002'
-      phone: '[TODO: US Phone]',                // e.g. '(713) 555-0199'
-      phoneTel: '[TODO: +1XXXXXXXXXX]',
+      name: 'Nashville Flagship',
+      shortName: 'Nashville',
+      address: '130 19th Ave N, Nashville, TN 37203',
+      phone: '',
+      phoneTel: '',
       email: '[TODO: us@chenchenshotchicken.com]',
       timezone: 'America/Chicago',              // TODO: Adjust for actual city
       hours: [
