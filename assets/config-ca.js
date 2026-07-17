@@ -14,7 +14,7 @@ const COUNTRY_CONFIG = {
 
   /* ── Brand copy ─────────────────────────────────────── */
   tagline: 'Born in China. Raised in Nashville. Served in Toronto.',
-  heroHeadline: 'Nashville Heat.<br><span class="gradient-text">Szechuan Soul.</span>',
+  heroHeadline: 'Nashville Heat.<br><span class="gradient-text">Asian Soul.</span>',
   heroSubline: 'Toronto Made.',
   heroCopy: 'Chef-driven Nashville hot chicken fused with bold Szechuan flavors — crispy, juicy, and handcrafted from scratch. Ranked #1 on Yelp Canada\'s Top 100 Places to Eat. Proudly Halal.',
   metaTitle: "Chen Chen's Nashville Hot Chicken | Toronto, Canada | Yelp's #1",
