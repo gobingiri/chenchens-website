@@ -680,24 +680,14 @@ body.has-banner .site-header { top: 38px; }
 .location-box { position: relative; }
 .location-box__map {
   border: var(--border-thick);
-  background: #EAE5DE;
+  background: url('../assets/map_graphic.jpg') center/cover;
   height: 250px;
   position: relative;
   margin-bottom: 1.5rem;
   overflow: hidden;
 }
-/* Map mockup using CSS pattern */
-.location-box__map::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: linear-gradient(#d3ccc2 2px, transparent 2px), linear-gradient(90deg, #d3ccc2 2px, transparent 2px);
-  background-size: 30px 30px;
-  transform: rotate(15deg) scale(1.5);
-}
 .location-pin {
-  position: absolute; top: 40%; left: 50%;
-  width: 24px; height: 36px; background: var(--blood-red);
-  clip-path: polygon(50% 100%, 100% 0, 0 0);
-  transform: translate(-50%, -50%);
+  display: none;
 }
 
 .catering-box {
