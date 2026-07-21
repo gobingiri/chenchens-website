@@ -540,9 +540,9 @@ body.has-banner .site-header { top: 38px; }
   color: var(--bg-paper);
   padding: 3rem 2rem;
   position: relative;
-  z-index: 1;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
   transform: rotate(-1deg);
+  transform-style: preserve-3d;
 }
 
 .burn-scale-panel::before,
@@ -550,18 +550,17 @@ body.has-banner .site-header { top: 38px; }
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  z-index: -1;
 }
 
 .burn-scale-panel::before {
   background: #b5ad9e;
-  transform: rotate(3deg) translate(-12px, 12px);
+  transform: translateZ(-1px) rotate(3deg) translate(-12px, 12px);
   box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
 }
 
 .burn-scale-panel::after {
   background: #d1c9ba;
-  transform: rotate(-2deg) translate(12px, -10px);
+  transform: translateZ(-2px) rotate(-2deg) translate(12px, -10px);
   box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
 }
 
