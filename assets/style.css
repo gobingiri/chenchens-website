@@ -185,7 +185,6 @@ section { padding: var(--section-pad) 0; }
   width: 100%;
   z-index: 100;
   background: var(--bg-paper);
-  border-bottom: 5px solid var(--blood-red);
   height: var(--header-h);
   transition: top 0.3s;
 }
@@ -778,6 +777,7 @@ body.has-banner .site-header { top: 38px; }
   color: var(--bg-paper);
   padding: 0.5rem 0;
   overflow: hidden;
+  border-top: 5px solid var(--blood-red);
   border-bottom: 5px solid var(--blood-red);
   margin-top: var(--header-h);
 }
