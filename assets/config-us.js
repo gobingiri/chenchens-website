@@ -22,7 +22,7 @@ const COUNTRY_CONFIG = {
 
   /* ── Opening Soon banner ────────────────────────────── */
   /* Set to false and fill in location data to launch */
-  openingSoon: true,
+  openingSoon: false,
   openingSoonText: '🇺🇸 Now Open in Nashville — Order Pickup!',
 
   /* ── Locations ───────────────────────────────────────── */
