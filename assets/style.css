@@ -527,9 +527,10 @@ body.has-banner .site-header { top: 38px; }
 .torn-section-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 6rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  max-width: 1500px;
 }
 
 @media (max-width: 960px) {
