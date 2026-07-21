@@ -529,6 +529,7 @@ body.has-banner .site-header { top: 38px; }
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 @media (max-width: 960px) {
