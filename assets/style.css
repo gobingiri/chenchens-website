@@ -44,6 +44,25 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-h);
   overscroll-behavior-y: none;
+  overflow-y: overlay;
+}
+
+/* WebKit Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blood-red);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff3333;
 }
 
 
