@@ -539,9 +539,30 @@ body.has-banner .site-header { top: 38px; }
   background: var(--charcoal);
   color: var(--bg-paper);
   padding: 3rem 2rem;
-  clip-path: polygon(2% 1%, 98% 0%, 100% 99%, 0% 98%);
-  box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
   transform: rotate(-1deg);
+}
+
+.burn-scale-panel::before,
+.burn-scale-panel::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+}
+
+.burn-scale-panel::before {
+  background: #b5ad9e;
+  transform: rotate(3deg) translate(-12px, 12px);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+}
+
+.burn-scale-panel::after {
+  background: #d1c9ba;
+  transform: rotate(-2deg) translate(12px, -10px);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
 }
 
 .burn-scale-panel h2 { color: var(--bg-paper); margin-bottom: 2rem; }
