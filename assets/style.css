@@ -216,7 +216,7 @@ body.has-banner .site-header { top: 38px; }
 }
 .site-header.scrolled .site-header__logo img {
   height: 115px;
-  transform: translateY(20px);
+  transform: translateY(32px);
 }
 
 .site-nav { display: flex; gap: 2.5rem; align-items: center; }
@@ -304,7 +304,7 @@ body.has-banner .site-header { top: 38px; }
   .site-header .container { position: relative; }
   .site-header__logo { position: absolute; left: 50%; transform: translateX(-50%); }
   .site-header__logo img { height: 100px; transform: translateY(20px); }
-  .site-header.scrolled .site-header__logo img { height: 85px; transform: translateY(10px); }
+  .site-header.scrolled .site-header__logo img { height: 85px; transform: translateY(20px); }
   .nav-toggle { display: block; position: absolute; right: var(--gutter); }
   
   .site-nav {
