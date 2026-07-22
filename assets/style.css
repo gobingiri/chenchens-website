@@ -669,7 +669,6 @@ body.has-banner .site-header { top: 38px; }
 
 .chef__img-wrap { position: relative; }
 .chef__img-wrap img {
-  filter: grayscale(100%) contrast(1.2);
   border: 3px solid var(--bg-paper);
 }
 .chef__stamp {
