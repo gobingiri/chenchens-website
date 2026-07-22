@@ -594,9 +594,9 @@ body.has-banner .site-header { top: 38px; }
   letter-spacing: 0.05em;
 }
 .burn-card__desc {
-  font-size: 0.8rem;
-  color: #AAA;
-  line-height: 1.4;
+  font-size: 1.0rem;
+  color: #CCC;
+  line-height: 1.5;
 }
 
 /* Menu Panel */
