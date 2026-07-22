@@ -536,6 +536,10 @@ body.has-banner .site-header { top: 38px; }
 
 @media (max-width: 960px) {
   .torn-section-container { grid-template-columns: 1fr; }
+  .burn-scale-panel {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 .burn-scale-panel {
