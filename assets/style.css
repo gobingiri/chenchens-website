@@ -304,8 +304,8 @@ body.has-banner .site-header { top: 38px; }
 @media (max-width: 960px) {
   .site-header .container { position: relative; }
   .site-header__logo { position: absolute; left: 50%; transform: translateX(-50%); }
-  .site-header__logo img { height: 100px; transform: translateY(20px); }
-  .site-header.scrolled .site-header__logo img { height: 85px; transform: translateY(20px); }
+  .site-header__logo img { height: 125px; transform: translateY(24px); }
+  .site-header.scrolled .site-header__logo img { height: 100px; transform: translateY(22px); }
   .nav-toggle { display: block; position: absolute; right: var(--gutter); }
   
   .site-nav {
