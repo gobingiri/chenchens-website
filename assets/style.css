@@ -686,7 +686,7 @@ body.has-banner .site-header { top: 38px; }
   box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
 }
 
-.chef__content h2 { margin-bottom: 1.5rem; }
+.chef__content h2 { margin-bottom: 1.5rem; color: var(--blood-red); }
 .chef__content p { margin-bottom: 1.2rem; font-size: 1.1rem; }
 
 @media (max-width: 960px) {
