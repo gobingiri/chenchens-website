@@ -63,5 +63,8 @@ const COUNTRY_CONFIG = {
     instagramFeedUrl: '', // Paste Behold.so or NoCodeAPI JSON Feed URL here for a live feed
     tiktok: 'https://www.tiktok.com/@chenchenshotchicken',
     facebook: 'https://www.facebook.com/chenchenshotchicken'
-  }
+  },
+  
+  /* ── Forms ──────────────────────────────────────────── */
+  web3FormsKey: '352f602e-b74f-476f-b506-02fbc67803e9'
 };

@@ -165,41 +165,61 @@
   const cateringSuccess = $('#cateringSuccess');
 
   if (cateringForm) {
-    cateringForm.addEventListener('submit', (e) => {
+    cateringForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = cateringForm.querySelector('button[type="submit"]');
-      btn.textContent = 'Opening Email...';
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      
+      const accessKey = typeof COUNTRY_CONFIG !== 'undefined' && COUNTRY_CONFIG.web3FormsKey 
+        ? COUNTRY_CONFIG.web3FormsKey 
+        : '';
+        
+      if (!accessKey) {
+        alert("Configuration error: Missing Web3Forms access key.");
+        btn.textContent = 'INQUIRY FORM';
+        btn.disabled = false;
+        return;
+      }
       
       const name = $('#catName').value;
       const email = $('#catEmail').value;
       const subject = $('#catSubject').value;
       const message = $('#catMessage').value;
       
-      const targetEmail = (typeof COUNTRY_CONFIG !== 'undefined' && COUNTRY_CONFIG.country === 'ca') 
-        ? 'chenchensthewell@gmail.com' 
-        : 'chenchenshotchicken@gmail.com';
-
-      const mailtoLink = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message)}`;
-      
-      const a = document.createElement('a');
-      a.href = mailtoLink;
-      a.target = '_blank';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-
-      setTimeout(() => {
-        cateringForm.style.display = 'none';
-        if (cateringSuccess) {
-          // Update the fallback link dynamically so it contains all the form data
-          const fallbackLink = cateringSuccess.querySelector('#fallbackEmailBtn');
-          if (fallbackLink) {
-            fallbackLink.href = mailtoLink;
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: accessKey,
+            subject: 'New Catering Inquiry: ' + subject,
+            from_name: name,
+            email: email,
+            message: message
+          })
+        });
+        
+        const result = await response.json();
+        if (result.success) {
+          cateringForm.style.display = 'none';
+          if (cateringSuccess) {
+            cateringSuccess.style.display = 'block';
+            cateringSuccess.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'nearest' });
           }
-          cateringSuccess.style.display = 'block';
-          cateringSuccess.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'nearest' });
+        } else {
+          alert("Something went wrong. Please try again or email us directly.");
+          btn.textContent = 'INQUIRY FORM';
+          btn.disabled = false;
         }
-      }, 1000);
+      } catch (error) {
+        alert("Network error. Please check your connection and try again.");
+        btn.textContent = 'INQUIRY FORM';
+        btn.disabled = false;
+      }
     });
   }
 
