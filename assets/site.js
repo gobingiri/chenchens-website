@@ -177,7 +177,7 @@
         
       if (!accessKey) {
         alert("Configuration error: Missing Web3Forms access key.");
-        btn.textContent = 'INQUIRY FORM';
+        btn.textContent = 'SUBMIT INQUIRY';
         btn.disabled = false;
         return;
       }
@@ -212,12 +212,12 @@
           }
         } else {
           alert("Something went wrong. Please try again or email us directly.");
-          btn.textContent = 'INQUIRY FORM';
+          btn.textContent = 'SUBMIT INQUIRY';
           btn.disabled = false;
         }
       } catch (error) {
         alert("Network error. Please check your connection and try again.");
-        btn.textContent = 'INQUIRY FORM';
+        btn.textContent = 'SUBMIT INQUIRY';
         btn.disabled = false;
       }
     });
