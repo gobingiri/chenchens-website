@@ -168,10 +168,20 @@
     cateringForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const btn = cateringForm.querySelector('button[type="submit"]');
-      btn.textContent = 'Submitting…';
-      btn.disabled = true;
+      btn.textContent = 'Opening Email...';
+      
+      const name = $('#catName').value;
+      const email = $('#catEmail').value;
+      const subject = $('#catSubject').value;
+      const message = $('#catMessage').value;
+      
+      const targetEmail = (typeof COUNTRY_CONFIG !== 'undefined' && COUNTRY_CONFIG.country === 'ca') 
+        ? 'chenchensthewell@gmail.com' 
+        : 'chenchenshotchicken@gmail.com';
 
-      // Simulate API submission
+      const mailtoLink = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message)}`;
+      window.location.href = mailtoLink;
+
       setTimeout(() => {
         cateringForm.style.display = 'none';
         if (cateringSuccess) {
