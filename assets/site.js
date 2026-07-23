@@ -180,11 +180,22 @@
         : 'chenchenshotchicken@gmail.com';
 
       const mailtoLink = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message)}`;
-      window.location.href = mailtoLink;
+      
+      const a = document.createElement('a');
+      a.href = mailtoLink;
+      a.target = '_blank';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
 
       setTimeout(() => {
         cateringForm.style.display = 'none';
         if (cateringSuccess) {
+          // Update the fallback link dynamically so it contains all the form data
+          const fallbackLink = cateringSuccess.querySelector('#fallbackEmailBtn');
+          if (fallbackLink) {
+            fallbackLink.href = mailtoLink;
+          }
           cateringSuccess.style.display = 'block';
           cateringSuccess.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'nearest' });
         }
